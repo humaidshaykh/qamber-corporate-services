@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Qamber Corporate Services</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <!-- custom css -->
+    <!-- <link rel="stylesheet" href="styling/home.css"> -->
+    <!-- bootstrap cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- fontawesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- googlefonts cdn link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none !important;
+        transition: .3s linear;
+    }
+    input{
+        caret-color: #9E9E9E;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    html {
+        overflow-x: hidden;
+    }
+
+
+
+
+    /* header section style */
+
+    .header {
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 7%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5000;
+        border-bottom: .8px solid #717171;
+    }
+
+    .links a {
+        margin: 0 12px;
+        padding: 0px 7px 7px 7px;
+        color: #9E9E9E;
+        font-size: 15px !important;
+        font-weight: 400;
+        letter-spacing: .2px;
+    }
+
+    .links a:hover {
+        border-bottom: 2px solid #E8A419;
+        color: #FFFFFF;
+    }
+
+    .linksactive {
+        border-bottom: 2px solid #E8A419;
+        color: #FFFFFF !important;
+        font-weight: 500 !important;
+    }
+
+    /*on scroll effect*/
+
+    .nav-change {
+        background: #713038;
+    }
+
+    /* header section */
+
+
+    /*home section style*/
+
+    /*home section style end*/
+    .home {
+        min-height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .5)), url(images/Rectangle19.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .searchbar {
+        border-radius: 200px 0px 0px 200px;
+        border-right-color: transparent !important;
+        border-color: #9E9E9E;
+        box-shadow: none;
+        width: 160px !important;
+    }
+
+    .searchbar:focus {
+        box-shadow: none;
+        border-color: #9E9E9E;
+    }
+
+    .searchbar-btn {
+        border-radius: 0px 100px 100px 0px;
+        border-left-color: transparent !important;
+        border-color: #9E9E9E;
+    }
+
+    .iii {
+        margin-right: 28px;
+    }
+
+    .ccc {
+        -webkit-text-fill-color: #9E9E9E;
+        /* -webkit-text-stroke: 1px #9E9E9E; */
+    }
+
+    .searchbar-btn:hover {
+        background-color: transparent;
+        border-color: #9E9E9E;
+        color: none;
+    }
+
+    .icons {
+        display: flex;
+    }
+
+    .icons a div {
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #9E9E9E;
+        border: .5px solid #9E9E9E;
+        border-radius: 50px;
+        margin: 0px 0px;
+        padding: 9px;
+    }
+
+    .fa-facebook-f {
+        padding: 9px 12px !important;
+    }
+
+    .contentt {
+        display: flex;
+        gap: 4px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 65px;
+        margin-left: auto;
+    }
+
+    .main {
+        background-color: #FFFFFF;
+        transform: scale(.9);
+        width: 175px;
+        color: #000000;
+        cursor: pointer;
+        border-radius: 28px;
+        padding: 35px 0px 8px 0px;
+    }
+
+    .main:hover {
+        transform: scale(1);
+    }
+
+    .contentt:hover> :not(:hover) {
+        transform: scale(0.9);
+    }
+
+
+    .main h6 {
+        line-height: 1.5;
+        font-family: Roboto, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+    }
+
+    .greater-than {
+        background-color: #E8A419;
+        border-radius: 50px;
+        padding: 8px 8px;
+        opacity: 0;
+    }
+
+    .main:hover .greater-than {
+        background-color: #E8A419;
+        border-radius: 50px;
+        margin: auto;
+        opacity: 1;
+    }
+
+    .main-heading {
+        color: #FFFFFF;
+        text-align: start;
+        align-items: center;
+        margin-left: 100px;
+        margin-top: 180px;
+    }
+
+    .main-heading strong {
+        font-family: 'Gowun Batang', serif;
+        word-spacing: 2.5px;
+        font-size: 16px;
+    }
+
+    .main-heading h2 {
+        font-family: 'Merriweather', serif;
+        font-size: 35px;
+        word-spacing: 2.5px;
+    }
+
+    .main-heading .div-1 {
+        background-color: #E8A419;
+        height: 112.5px;
+        width: 8px;
+        margin-right: 8px;
+    }
+
+    .div-2 h2 {
+        line-height: 1.2;
+        padding-top: 0px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .div-2 strong {
+        padding-top: 0px !important;
+        margin-top: 0px !important;
+    }
+
+    .services-btn {
+        background-color: rgba(255, 255, 255, 0.7);
+        font-size: 15px;
+        font-family: Robobto, sans-serif;
+        border-radius: 20px;
+        text-align: center;
+        padding: 8px 16px;
+        color: #3D3D3D;
+    }
+
+    .mobile-navbar-btn {
+        display: none;
+    }
+
+
+    @media(max-width: 1130px) {
+
+        .main-heading {
+            margin-left: 50px;
+            margin-top: 240px !important;
+        }
+
+        .contentt {
+            margin-top: 180px;
+        }
+
+        .iii {
+            display: none;
+        }
+    }
+
+    @media(max-width: 991px) {
+        .d-none-md {
+            display: none;
+        }
+    }
+
+    @media(max-width: 980px) {
+
+        .main-heading {
+            margin-left: 50px;
+            margin-top: 280px !important;
+        }
+
+        .contentt {
+            margin-top: 220px;
+        }
+
+        .mobile-navbar-btn {
+            display: block;
+        }
+
+        .mobile-navbar-btn i {
+            color: #FFFFFF;
+        }
+
+        .links {
+            display: none;
+        }
+
+        .offcanvas {
+            background-color: #F4F4F4;
+        }
+
+        .linksoff ul li {
+            list-style: none;
+            justify-content: start;
+            margin: 16px 0px;
+        }
+
+        .linksoff ul li a {
+            color: #9E9E9E;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: .2px;
+        }
+
+        .linksactiveoff {
+            border-bottom: 2px solid #E8A419;
+            color: #000000 !important;
+            font-weight: 600;
+
+        }
+
+        .main-heading strong {
+            font-size: 14px;
+        }
+
+        .main-heading h2 {
+            font-size: 30px;
+        }
+
+        .main-heading .div-1 {
+            height: 100px;
+            width: 7px;
+            margin-right: 8px;
+        }
+
+        .qamber-right h2,
+        .our-costumer h2 {
+            font-size: 32px;
+        }
+
+        .qamber-right p {
+            font-size: 14px;
+        }
+
+        .icons {
+            display: none;
+        }
+
+    }
+
+    @media (max-width: 768px) {
+        .main-heading {
+            margin-left: 40px;
+            margin-top: 182px;
+        }
+
+        .contentt {
+            margin-top: 120px;
+        }
+
+        .main-heading strong {
+            font-size: 13px;
+        }
+
+        .main-heading h2 {
+            font-size: 25px;
+        }
+
+        .main-heading .div-1 {
+            height: 89px;
+            width: 6px;
+            margin-right: 8px;
+        }
+
+        .main-three {
+            display: none;
+        }
+
+        .qamber-right h2,
+        .our-costumer h2 {
+            font-size: 30px !important;
+        }
+
+        .qamber-right p {
+            font-size: 13px !important;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .main-heading {
+            margin-left: 30px;
+            margin-top: 170px;
+        }
+
+        .contentt {
+            margin-top: 120px;
+        }
+
+        .main-heading h2 {
+            font-size: 22px;
+            word-spacing: 2.5px;
+            line-height: 1;
+        }
+
+        .main-heading .div-1 {
+            background-color: #E8A419;
+            height: 75px;
+            width: 5px;
+            margin-right: 8px;
+        }
+
+        .main-three,
+        .main-four {
+            display: none;
+        }
+
+        .qamber-right strong,
+        .our-costumer strong {
+            font-size: 16px;
+        }
+
+        .qamber-right h2,
+        .our-costumer h2 {
+            font-size: 25px !important;
+        }
+
+    }
+</style>
+
+
+
+<body>
+    <!-- header section start -->
+    <header class="header" id="nav">
+        <div class="logo">
+            <a href="index.html"><img width="125px" src="images/logo.png" alt=""></a>
+        </div>
+
+        <div class="links">
+            <a href="index.html" class="linksactive">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="blogs.html">Blog</a>
+            <a href="contact-us.html">Contact Us</a>
+        </div>
+
+        <div class="icons">
+
+            <div class="input-group iii">
+                <input class="form-control bg-transparent searchbar" type="text">
+                <span class="input-group-append">
+                    <button class="btn btn-outline-secondary searchbar-btn" type="button">
+                        <i class="fa fa-search ccc"></i></button>
+                </span>
+
+            </div>
+            <a href="">
+                <div class="fa-brands fa-facebook-f"></div>
+            </a>
+            <a href="">
+                <div class="fa-brands fa-twitter mx-2"></div>
+            </a>
+            <a href="">
+                <div class="fa-brands fa-linkedin-in"></div>
+            </a>
+        </div>
+
+        <div class="mobile-navbar-btn">
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"><i name="menu-btn"
+                    class="fa-solid fa-bars fa-2xl"></i></button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="linksoff">
+                        <ul>
+                            <li><a href="index.html" class="linksactiveoff">Home</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                            <li><a href="blogs.html">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- header section ends -->
+
+    <!-- home section start -->
+
+    <section class="home" id="home">
+
+        <div class="row">
+            <div class="col-12 d-flex align-items-center main-heading">
+                <div class="div-1"></div>
+                <div class="div-2">
+                    <strong>We are here for you</strong>
+                    <h2 class="mt-3">Giving Future to your <br>Investment</h2>
+                </div>
+            </div>
+
+            <div class="contentt col-12">
+                <a href="services.html">
+                    <div class="main main-one">
+                        <img src="images/vector1.png" alt="">
+                        <h6 class="mt-2">Company Setup <br>in UAE</h6>
+                        <img class="greater-than" src="images/greater-than.png" alt="">
+                    </div>
+                </a>
+                <a href="services.html">
+                    <div class="main main-two">
+                        <img src="images/vector2.png" alt="">
+                        <h6 class="mt-2">International <br>Visa Process</h6>
+                        <img class="greater-than" src="images/greater-than.png" alt="">
+                    </div>
+                </a>
+                <a href="services.html">
+                    <div class="main main-three">
+                        <img src="images/vector3.png" alt="">
+                        <h6 class="mt-2">Dubai Silicon <br>Oasis DSO</h6>
+                        <img class="greater-than" src="images/greater-than.png" alt="">
+                    </div>
+                </a>
+                <a href="services.html">
+                    <div class="main main-four">
+                        <img src="images/vector4.png" alt="">
+                        <h6 class="mt-2">Trade <br>License</h6>
+                        <img class="greater-than" src="images/greater-than.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <a href="services.html"
+                class="services-btn mt-2 mb-1 m-auto col-4 col-sm-2 col-md-2 col-lg-1 col-xl-1"><strong>Services</strong></a>
+        </div>
+    </section>
+    <!-- home section ends -->
+
+    <style>
+        .qamber-right strong {
+            color: #E8A419;
+            line-height: 1.6;
+            font-family: Roboto, sans-serif;
+        }
+
+        .qamber-right h2 {
+            font-family: 'Gowun Batang', serif;
+            font-size: 35px;
+            word-spacing: 2.5px;
+            color: #939393;
+            line-height: 1.2;
+        }
+
+        .qamber-right p {
+            text-align: justify;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            line-height: 1.7857;
+            color: #7A7A7A !important;
+            font-weight: 400;
+        }
+    </style>
+
+    <div class="container my-4 pt-3">
+        <div class="row align-items-center">
+            <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                <img class="img-fluid" src="images/qamber-img.png" alt="">
+            </div>
+            <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div>
+            <div
+                class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 qamber-right  mt-2 mt-sm-3 mt-md-4 mt-lg-0 mt-xl-0">
+                <h5><strong>ABOUT OUR COMPANY</strong></h5>
+                <h2 class="mb-4">Make the client <br>the hero of your story</h2>
+                <p>Qamber Corporate Services is an experienced business setup consultant in Dubai. Our experts help
+                    guide and assist you in all kinds of business setup-related services in Dubai, as per your
+                    requirements. Our mission is to provide the best PRO and business setup services to our clients
+                    across various industry verticals in the UAE and the GCC region.<br>
+                    We, at GlobalLink, work alongside clients to simplify the path for the formation and maintenance of
+                    a business in Dubai mainland or Free Zones. With over 16 years of industry experience and a team of
+                    highly experienced professionals, we help entrepreneurs and investors curate their business
+                    journeys.
+                    <br>We are your trusted and reliable business setup consultant in Dubai. We offer a range of
+                    inter-related services, whether you need a trade license, visa, or need help with other rules and
+                    regulations governing business management in the UAE.
+                </p>
+                <div class="zx">
+                    <div></div>
+                    <div class="aa">
+                        <a href="about-us.html"><img src="images/greater-than.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .our-costumer {
+            background-color: #F4F4F4;
+        }
+
+        .our-costumer strong {
+            color: #E8A419;
+            line-height: 1.6;
+            font-family: Roboto, sans-serif;
+        }
+
+        .our-costumer h2 {
+            font-family: 'Gowun Batang', serif;
+            font-size: 30px;
+            word-spacing: 2.5px;
+            color: #939393;
+            line-height: 1.2;
+        }
+
+        .section-3 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .sec-child-2 {
+            margin-left: 12px;
+        }
+
+        .sec-child-2 strong {
+            font-size: 32px;
+            color: #000000;
+        }
+
+        .sec-child-2 h6 {
+            font-weight: 400;
+            color: #000000;
+        }
+    </style>
+
+    <div class="our-costumer py-4">
+        <div class="container">
+            <h5><strong>ABOUT OUR COMPANY</strong></h5>
+            <h2>Take Your First Step To Start Your Business</h2>
+            <div class="row mt-4">
+                <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                    <div class="section-3">
+                        <div class="sec-child-1">
+                            <img width="52px" src="images/vector5.png" alt="">
+                        </div>
+                        <div class="sec-child-2">
+                            <strong>16+</strong>
+                            <h6>Years in Business</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                    <div class="section-3">
+                        <div class="sec-child-1">
+                            <img width="52px" src="images/vector2.png" alt="">
+                        </div>
+                        <div class="sec-child-2">
+                            <strong>687+</strong>
+                            <h6>Years in Business</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                    <div class="section-3">
+                        <div class="sec-child-1">
+                            <img width="52px" src="images/vector3.png" alt="">
+                        </div>
+                        <div class="sec-child-2">
+                            <strong>245+</strong>
+                            <h6>Years in Business</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                    <div class="section-3">
+                        <div class="sec-child-1">
+                            <img width="52px" src="images/vector4.png" alt="">
+                        </div>
+                        <div class="sec-child-2">
+                            <strong>46+</strong>
+                            <h6>Years in Business</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <style>
+        .qamber-right strong {
+            color: #E8A419;
+            line-height: 1.6;
+            font-family: Roboto, sans-serif;
+        }
+
+        .qamber-right h2 {
+            font-family: 'Gowun Batang', serif;
+            font-size: 35px;
+            word-spacing: 2.5px;
+            color: #939393;
+            line-height: 1.2;
+        }
+
+        .qamber-right p {
+            text-align: justify;
+            font-family: Roboto, sans-serif;
+            font-size: 14px;
+            line-height: 1.7857;
+            color: #000000;
+            font-weight: 400;
+        }
+
+        .qamber-right a {
+            margin: auto;
+            justify-content: end;
+            text-align: center;
+        }
+
+        .qamber-right img {
+            background-color: #E8A419;
+            border-radius: 50px;
+            padding: 8px 8px;
+            /* margin-left: 412px; */
+        }
+
+        .zx {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: end;
+        }
+    </style>
+
+    <div class="container my-4 pt-3">
+        <div class="row align-items-center">
+            <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 qamber-right">
+                <h5><strong>OUR SERVICES</strong></h5>
+                <h2 class="mb-4">Make the client <br>the hero of your story</h2>
+                <p>Qamber Corporate Services team aims to be the best business setup consultant in Dubai. For over 16
+                    years, we have worked with local and global businesses to provide carefully curated consultant
+                    services for their company set up in Dubai and the rest of the UAE. No matter what you need or
+                    business in Dubai, we address all your needs and provide seamless business formation services.
+                </p>
+                <div class="zx">
+                    <div></div>
+                    <div class="aa mb-1">
+                        <a href="services.html"><img src="images/greater-than.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div>
+            <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mt-2 mt-sm-3 mt-md-4 mt-lg-0 mt-xl-0">
+                <img class="img-fluid" src="images/qamber-img-2.png" alt="">
+            </div>
+        </div>
+    </div>
+    <style>
+        .main-footer {
+            background-color: #F4F4F4;
+        }
+
+        .footer {
+            display: flex;
+        }
+
+        .footer a .i-1 {
+            -webkit-text-fill-color: #FFFFFF;
+            -webkit-text-stroke: 1px #9E9E9E;
+            border: .1px solid #FFFFFF;
+            border-radius: 50px;
+            margin: 0px 0px;
+            background-color: #FFFFFF;
+            padding: 9px;
+        }
+
+        .searchbar-btn-2 {
+            border-radius: 50px;
+            border-color: #9E9E9E;
+            padding: 4px 9px 4px 9px;
+        }
+
+        .searchbar-btn-2:hover {
+            background-color: transparent;
+            border-color: #9E9E9E;
+            color: #9E9E9E !important;
+        }
+
+        .iii-2 {
+            margin-right: 26px;
+        }
+    </style>
+
+    <div class="main-footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-0 col-lg-4 col-xl-4 d-none-md"></div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">POWERED BY <strong>QAMBER</strong>
+                </div>
+                <div class="col-0 col-lg-4 col-xl-4 d-none-md">
+                    <div class="footer justify-content-end">
+
+                    
+                        <a href="">
+                            <div class="i-1 fa-brands fa-facebook-f"></div>
+                        </a>
+                        <a href="">
+                            <div class="i-1 fa-brands fa-twitter mx-2"></div>
+                        </a>
+                        <a href="">
+                            <div class="i-1 fa-brands fa-linkedin-in"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <style>
+        /* Bottom to top button */
+
+        .to-top {
+            background-color: #E8A419;
+            position: fixed;
+            bottom: 16px;
+            right: 32px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1f1f1f;
+            box-shadow: 0 0 5px rgb(0 0 0 / 17%);
+            text-decoration: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: all .4s;
+        }
+
+        .to-top i {
+            color: #F4F4F4;
+            font-size: 22px;
+        }
+
+        .to-top.active {
+            bottom: 32px;
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        /* Bottom to top button end */
+    </style>
+
+    <!-- Bottom to top button -->
+    <a href="#" class="to-top">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
+    <!-- Bottom to top button end -->
+    <script>
+        //Bottom to top button
+        const toTop = document.querySelector(".to-top");
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 250) {
+                toTop.classList.add("active");
+            } else {
+                toTop.classList.remove("active");
+            }
+        })
+
+    //Bottom to top arrow end
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

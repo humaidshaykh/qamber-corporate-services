@@ -1,0 +1,1746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Qamber Corporate Services</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <!-- bootstrap cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- fontawesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- googlefonts cdn link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none !important;
+        transition: .3s linear;
+    }
+
+    input{
+        caret-color: #9E9E9E;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* header section style */
+
+    .header {
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 7%;
+        /* position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5000;
+        border-bottom: .8px solid #717171; */
+    }
+
+    .links a {
+        margin: 0 12px;
+        padding: 0px 7px 7px 7px;
+        color: #9E9E9E;
+        font-size: 15px !important;
+        font-weight: 400;
+        letter-spacing: .2px;
+    }
+
+    .links a:hover {
+        border-bottom: 2px solid #E8A419;
+        color: #474747;
+    }
+
+    .linksactive {
+        border-bottom: 2px solid #E8A419;
+        color: #474747 !important;
+        font-weight: 500 !important;
+    }
+
+    #menu-btnn {
+        display: none;
+    }
+
+    /*on scroll effect*/
+
+    .nav-change {
+        background: #713038;
+    }
+
+    /* header section */
+
+
+    /*home section style*/
+
+    /*home section style end*/
+
+    .searchbar {
+        border-radius: 200px 0px 0px 200px;
+        border-right-color: transparent !important;
+        border-color: #9E9E9E;
+        box-shadow: none;
+        width: 160px !important;
+    }
+
+    .searchbar:focus {
+        box-shadow: none;
+        border-color: #9E9E9E;
+    }
+
+    .searchbar-btn {
+        border-radius: 0px 100px 100px 0px;
+        border-left-color: transparent !important;
+        border-color: #9E9E9E;
+    }
+
+    .iii {
+        margin-right: 28px;
+    }
+
+    .ccc {
+        -webkit-text-fill-color: #9E9E9E;
+        /* -webkit-text-stroke: 1px #9E9E9E; */
+    }
+
+    .searchbar-btn:hover {
+        background-color: transparent;
+        border-color: #9E9E9E;
+        color: none;
+    }
+
+    .icons {
+        display: flex;
+    }
+
+    .icons a div {
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #9E9E9E;
+        border: .5px solid #9E9E9E;
+        border-radius: 50px;
+        margin: 0px 0px;
+        padding: 9px;
+    }
+
+    .fa-facebook-f {
+        padding: 9px 12px !important;
+    }
+
+    .mobile-navbar-btn {
+        display: none;
+    }
+
+    @media(max-width: 1130px) {
+        .iii {
+            display: none;
+        }
+    }
+
+    @media(max-width: 991px) {
+        .d-none-md {
+            display: none;
+        }
+    }
+
+    @media(max-width: 980px) {
+
+        .mobile-navbar-btn {
+            display: block;
+        }
+
+        .mobile-navbar-btn i {
+            color: #000000;
+        }
+
+        .links {
+            display: none;
+        }
+
+        .offcanvas {
+            background-color: #F4F4F4;
+        }
+
+        .linksoff ul li {
+            list-style: none;
+            justify-content: start;
+            margin: 16px 0px;
+        }
+
+        .linksoff ul li a {
+            color: #9E9E9E;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: .2px;
+        }
+
+        .linksactiveoff {
+            border-bottom: 2px solid #E8A419;
+            color: #000000 !important;
+            font-weight: 600;
+
+        }
+
+        .icons {
+            display: none;
+        }
+    }
+
+    @media(max-width: 768px) {
+        .parent-div {
+            gap: 12px !important;
+        }
+
+        .child-div {
+            width: 105px !important;
+            padding: 18px 0px !important;
+        }
+
+        .child-div img {
+            width: 38px !important;
+        }
+
+        .child-div h6 {
+            font-weight: 400 !important;
+            font-size: 9.5px !important;
+            margin-top: 9px !important;
+        }
+    }
+
+    @media(max-width: 484px) {
+        .parent-div {
+            gap: 10px !important;
+        }
+
+        .child-div {
+            width: 92px !important;
+            padding: 16px 0px !important;
+        }
+
+        .child-div img {
+            width: 34px !important;
+        }
+
+        .child-div h6 {
+            line-height: 1.5;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 300 !important;
+            font-size: 9px !important;
+            margin-top: 7px !important;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- header section start -->
+    <header class="header" id="nav">
+        <div class="logo">
+            <a href="index.html"><img width="125px" src="images/black-logo.png" alt=""></a>
+        </div>
+
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="services.html" class="linksactive">Services</a>
+            <a href="blogs.html">Blog</a>
+            <a href="contact-us.html">Contact Us</a>
+        </div>
+
+        <div class="icons">
+
+            <a href="">
+                <div class="fa-brands fa-facebook-f"></div>
+            </a>
+            <a href="">
+                <div class="fa-brands fa-twitter mx-2"></div>
+            </a>
+            <a href="">
+                <div class="fa-brands fa-linkedin-in"></div>
+            </a>
+        </div>
+
+        <div class="mobile-navbar-btn">
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"><i name="menu-btn"
+                    class="fa-solid fa-bars fa-2xl"></i></button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="linksoff">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about-us.html">About Us</a></li>
+                            <li><a href="services.html" class="linksactiveoff">Services</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
+                            <li><a href="blogs.html">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- header section ends -->
+
+    <style>
+        .sec {
+            background-color: #F5F5F5;
+        }
+
+        .home a {
+            color: #9E9E9E;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .home a:hover {
+            color: #000000;
+        }
+
+        .about-us a {
+            color: #000000;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    </style>
+    <div class="sec">
+        <div class="container d-flex py-2">
+            <div class="home"><a href="index.html">Home ></a></div>
+            <div class="about-us ms-2"><a href="Services.html">Services</a></div>
+        </div>
+    </div>
+
+
+
+    <style>
+        .parent-div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .child-div {
+            width: 140px;
+            padding: 22px 0px;
+            text-align: center;
+            border: 1px solid transparent;
+            cursor: pointer;
+            border-radius: 18px;
+        }
+
+        .child-div:hover {
+            border: 1px solid #C7C7C7;
+            border-radius: 18px;
+        }
+
+        .child-div img {
+            width: 45px;
+        }
+
+        .child-div h6 {
+            line-height: 1.5;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 600;
+            font-size: 10.3px;
+            color: #000000;
+            margin-top: 14px;
+        }
+
+        #z1 {
+            background-color: #F5F5F5;
+        }
+    </style>
+
+    <div class="container">
+        <div class="parent-div mt-5 py-1">
+            <a id="a1">
+                <div class="child-div" id="z1">
+                    <img src="images/vector1.png" alt="">
+                    <h6>BUSINESS SETUP <br>IN UAE</h6>
+                </div>
+            </a>
+
+            <a id="a2">
+                <div class="child-div" id="z2">
+                    <img src="images/vector2.png" alt="">
+                    <h6>BUSINESS SETUP <br>IN FREEZONE</h6>
+                </div>
+            </a>
+
+            <a id="a3">
+                <div class="child-div" id="z3">
+                    <img src="images/vector3.png" alt="">
+                    <h6>OFFSHORE COMPANY <br>FORMATION</h6>
+                </div>
+            </a>
+
+            <a id="a4">
+                <div class="child-div" id="z4">
+                    <img src="images/vector4.png" alt="">
+                    <h6>CORPORATE <br>PRO SERVICES</h6>
+                </div>
+            </a>
+
+            <a id="a5">
+                <div class="child-div" id="z5">
+                    <img src="images/vector2.png" alt="">
+                    <h6>VISA <br>SERVICES</h6>
+                </div>
+            </a>
+
+            <a id="a6">
+                <div class="child-div" id="z6">
+                    <img src="images/vector3.png" alt="">
+                    <h6>ACCOUNTING <br>SERVICES</h6>
+                </div>
+            </a>
+
+            <a id="a7">
+                <div class="child-div" id="z7">
+                    <img src="images/vector4.png" alt="">
+                    <h6>HR <br>SERVICES</h6>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+    <style>
+        .qamber-right strong {
+            color: #000000;
+            line-height: 1.6;
+            font-weight: 800;
+            font-family: Roboto, sans-serif;
+        }
+
+        .qamber-right p {
+            text-align: justify;
+            font-family: Roboto, sans-serif;
+            font-size: 13px;
+            line-height: 1.7857;
+            color: #000000;
+            font-weight: 400;
+            margin-right: 25px;
+        }
+
+        .sec-mid {
+            background-color: #F5F5F5;
+        }
+    </style>
+
+    <div id="div1">
+        <div class="container mt-5 py-2">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Company Setup in Dubai</strong></h4>
+                    <p>
+                        Starting a business in Dubai is very easy when you have the right and required paperwork.
+                        However,
+                        the documents required, the languages of the documents and the process of acquiring them can
+                        be
+                        yet
+                        long and sometimes tricky, therefore; if you are not familiar with UAE’s rules and preferred
+                        language, you might find the formation process difficult. At Global Link, we facilitate the
+                        business
+                        formation process and save you the hassle <br>
+                        1- Having a Local Sponsor <br>
+                        If you are willing to start up your business in the mainland then, according to UAE law, you
+                        need to
+                        have a local sponsor. A local sponsor is to own 51% of the company and you will own 49% of
+                        the
+                        company. The local sponsor will only have an annual fee; however, will not share any of the
+                        company’s profit. However, having a local sponsor facilitates the business formation
+                        process.
+                    </p>
+                    <h4><strong>Where to set up a company in Dubai</strong></h4>
+                    <p>When it comes to company formation in Dubai, there’s no doubt that a lot of information is
+                        required
+                        to review and fulfill to get things cleared in your desired location. A business consultant
+                        can
+                        help
+                        you in easy decision making to select the right location which is best suited for your
+                        specific
+                        business requirements. That’s where Global Links serve the purpose as it completes step by
+                        step
+                        process of clearing all the formalities without even bothering you, and steering you in the
+                        right
+                        direction, saving your money and time. Company formation in Dubai is easy with Global Links.
+                        We
+                        can
+                        help you set up a business in Dubai and UAE with our expert team of professionals in various
+                        departments.</p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <img class="img-fluid" src="images/serveices.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+        <style>
+            .qam {
+                background-color: #F5F5F5;
+                border-radius: 18px;
+            }
+
+            .qam strong {
+                color: #707070;
+                line-height: 1.6;
+                font-weight: 800;
+                font-family: Roboto, sans-serif;
+            }
+
+            .qam li {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.8;
+                color: #000000;
+                font-weight: 300;
+            }
+
+            .mmm {
+                background-color: #F5F5F5;
+                border-radius: 18px;
+            }
+
+            .mmm strong {
+                color: #707070;
+                line-height: 1.6;
+                font-weight: 800;
+                font-family: Roboto, sans-serif;
+            }
+
+            .mmm p {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.7857;
+                color: #000000;
+                font-weight: 400;
+                margin-right: 25px;
+            }
+
+            .s-btn button {
+                background-color: #E8A419;
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: Roboto, sans-serif;
+                border-radius: 18px;
+                padding: 5px 28px 5px 28px;
+            }
+        </style>
+
+
+
+
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Setting up of business in Mainland</strong></h4>
+                    <p>
+                        In order to start a business in Dubai, you are given options to either set up in free zone
+                        or
+                        mainland. If you are setting up in mainland, you need to partner with a UAE national, who
+                        will
+                        be
+                        owning 51% of the company share, where you will be owning only 49% of the shares. Local
+                        sponsor
+                        is a
+                        mandatory requirement if a foreign entrepreneur is planning to set up a business in UAE
+                        mainland.
+                        The sponsor should be a UAE national.
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qam p-4">
+                    <h4><strong>How to form a company in Dubai Mainland?</strong></h4>
+                    <ul>
+                        <li>Get name approved from DED</li>
+                        <li>Make MOA with professional service agent and submission with license application to DED</li>
+                        <li>Decide your local service agent</li>
+                        <li>Check location suitability, accessibility, and cost</li>
+                        <li>Get the visa eligibility and requirements cleared</li>
+                        <li>Choose a business registration consultant as trusted business solution partner</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="container my-3 py-3">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Setting up of business in Mainland</strong></h4>
+                    <p>
+                        In order to start a business in Dubai, you are given options to either set up in free zone
+                        or
+                        mainland. If you are setting up in mainland, you need to partner with a UAE national, who
+                        will
+                        be
+                        owning 51% of the company share, where you will be owning only 49% of the shares. Local
+                        sponsor
+                        is a
+                        mandatory requirement if a foreign entrepreneur is planning to set up a business in UAE
+                        mainland.
+                        The sponsor should be a UAE national.
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mmm p-4">
+                    <h4><strong>How to form a company in Dubai Free Zone?</strong></h4>
+                    <p>In order to start a business in Dubai, you are given options to either set up in free zone or
+                        mainland. If you are setting up in mainland, you need to partner with a UAE national, who
+                        will
+                        be
+                        owning 51% of the company share, where you will be owning only 49% of the shares. Local
+                        sponsor
+                        is a
+                        mandatory requirement if a foreign entrepreneur is planning to set up a business in UAE
+                        mainland.
+                        The sponsor should be a UAE national.</p>
+                </div>
+                <div class="col-12 text-center s-btn my-5">
+                    <button>Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        .target h1 {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        #div2 {
+            display: none;
+            margin: 100px 0;
+        }
+
+        #div3 {
+            display: none;
+            margin: 100px 0;
+        }
+
+        #div4 {
+            display: none;
+            margin: 100px 0;
+        }
+
+        #div5 {
+            display: none;
+            margin: 100px 0;
+        }
+
+        #div6 {
+            display: none;
+            margin: 100px 0;
+        }
+
+        #div7 {
+            display: none;
+            margin: 100px 0;
+        }
+    </style>
+
+
+    <div id="div2">
+        <div class="container mt-5 py-2">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Business Setup in Dubai Free Zones</strong></h4>
+                    <p>
+                        Free zones in the UAE are strategically located across Emirates and Dubai to support business
+                        initiatives in the region and ensure businesses can benefit from the existing reputation of
+                        those locations. At Qambercorporateservices.com, we provide start-to-end services company setup
+                        in Dubai Freezones.<br><br>
+                        Business Setup in DUBAI Free Zones gives you 100% ownership of your business. In addition to
+                        that, free zone areas let you enjoy several other advantages such as zero percent import and
+                        export taxation, privacy in your business, corporate tax exemption, and limited reporting
+                        obligations. As a result, a business setup in Dubai Free Zones is an appealing prospect for
+                        foreign investors.
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <img class="img-fluid" src="images/qamber-img.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+        <style>
+            .qam {
+                background-color: #F5F5F5;
+                border-radius: 18px;
+            }
+
+            .qam strong {
+                color: #707070;
+                line-height: 1.6;
+                font-weight: 800;
+                font-family: Roboto, sans-serif;
+            }
+
+            .qam li {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.8;
+                color: #000000;
+                font-weight: 300;
+            }
+
+            .qamm li {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.8;
+                color: #000000;
+                font-weight: 300;
+            }
+
+            .mmm {
+                background-color: #F5F5F5;
+                border-radius: 18px;
+            }
+
+            .mmm strong {
+                color: #707070;
+                line-height: 1.6;
+                font-weight: 800;
+                font-family: Roboto, sans-serif;
+            }
+
+            .mmm p {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.7857;
+                color: #000000;
+                font-weight: 400;
+                margin-right: 25px;
+            }
+
+            .s-btn button {
+                background-color: #E8A419;
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: Roboto, sans-serif;
+                border-radius: 18px;
+                padding: 5px 28px 5px 28px;
+            }
+        </style>
+
+
+
+
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Key Benefits of Dubai Free Zone Business Formation</strong></h4>
+                    <p>
+                        Company Setup in Dubai Freezone can provide your business with many high-end benefits,
+                        including:
+                    <ul class="qamm">
+                        <li>100% Business Ownership</li>
+                        <li>Zero Corporate or Income Tax</li>
+                        <li>World-class Infrastructure</li>
+                        <li>Flexi-office setup</li>
+                        <li>No customs duty on imports</li>
+                        <li>Global connectivity</li>
+                    </ul>
+                    <p>Consult with the Qambercorporateservices.com team to get a flexible, safe, and seamless business
+                        setup in Dubai Free Zones. We promise to take care of everything for you and deliver high levels
+                        of
+                        satisfaction.
+                    </p>
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qam p-4">
+                    <h4><strong>Top Free Zones for Business Setup in Dubai</strong></h4>
+                    <ul>
+                        <li>Jebel Ali Free Zone (JAFZA)</li>
+                        <li>Dubai HealthCare City (DHCC)</li>
+                        <li>Dubai Airport Free Zone (DAFZA)</li>
+                        <li>Dubai International City</li>
+                        <li>Dubai Maritime City (DMC)</li>
+                        <li>Dubai Silicon Oasis (DSO)</li>
+                        <li>Dubai International Financial Centre (DIFC)</li>
+                        <li>Dubai Multi Commodities Centre (DMCC)</li>
+                        <li>TECOM Free Zone</li>
+                        <li>International Humanitarian City (IHC)</li>
+                        <li>Dubai Logistics City (DLC)</li>
+                        <li>Dubai South Free Zone</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="div3">
+        <div class="container mt-5 py-2">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Where to set up a company in Dubai</strong></h4>
+                    <p>
+                        When it comes to company formation in Dubai, there’s no doubt that a lot of information is
+                        required to review and fulfill to get things cleared in your desired location. A business
+                        consultant can help you in easy decision making to select the right location which is best
+                        suited for your specific business requirements. That’s where Qambercorporateservices.com serve
+                        the purpose as it completes step by step process of clearing all the formalities without even
+                        bothering you, and steering you in the right direction, saving your money and time. Company
+                        formation in Dubai is easy with Qambercorporateservices.com. We can help you set up a business
+                        in Dubai and UAE with our expert team of professionals in various departments.
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <img class="img-fluid" src="images/qamber-img-3.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+        <style>
+            .qam {
+                background-color: #F5F5F5;
+                border-radius: 18px;
+            }
+
+            .qam strong {
+                color: #707070;
+                line-height: 1.6;
+                font-weight: 800;
+                font-family: Roboto, sans-serif;
+            }
+
+            .qam li {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.8;
+                color: #000000;
+                font-weight: 300;
+            }
+
+            .mmm {
+                background-color: #F5F5F5;
+                border-radius: 18px;
+            }
+
+            .mmm strong {
+                color: #707070;
+                line-height: 1.6;
+                font-weight: 800;
+                font-family: Roboto, sans-serif;
+            }
+
+            .mmm p {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.7857;
+                color: #000000;
+                font-weight: 400;
+                margin-right: 25px;
+            }
+
+            .s-btn button {
+                background-color: #E8A419;
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: Roboto, sans-serif;
+                border-radius: 18px;
+                padding: 5px 28px 5px 28px;
+            }
+        </style>
+
+
+
+
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Setting up of business in Mainland</strong></h4>
+                    <p>
+                        In order to start a business in Dubai, you are given options to either set up in free zone or
+                        mainland. If you are setting up in mainland, you need to partner with a UAE national, who will
+                        be owning 51% of the company share, where you will be owning only 49% of the shares. Local
+                        sponsor is a mandatory requirement if a foreign entrepreneur is planning to set up a business in
+                        UAE mainland. The sponsor should be a UAE national.
+
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qam p-4">
+                    <h4><strong>How to form a company in Dubai Mainland?</strong></h4>
+                    <ul>
+                        <li>Get name approved from DED</li>
+                        <li>Make MOA with professional service agent and submission with license application to DED</li>
+                        <li>Decide your local service agent</li>
+                        <li>Check location suitability, accessibility, and cost</li>
+                        <li>Get the visa eligibility and requirements cleared</li>
+                        <li>Choose a business registration consultant as trusted business solution partner</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="container my-3 py-3">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Setting up of business in Free Zone</strong></h4>
+                    <p>
+                        In order to start a business in Dubai, you are given options to either set up in free zone or
+                        mainland. If you are setting up in mainland, you need to partner with a UAE national, who will
+                        be owning 51% of the company share, where you will be owning only 49% of the shares. Local
+                        sponsor is a mandatory requirement if a foreign entrepreneur is planning to set up a business in
+                        UAE mainland. The sponsor should be a UAE national.
+
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mmm p-4">
+                    <h4><strong>How to form a company in Dubai Free Zone?</strong></h4>
+                    <p>In order to start a business in Dubai, you are given options to either set up in free zone or
+                        mainland. If you are setting up in mainland, you need to partner with a UAE national, who
+                        will
+                        be
+                        owning 51% of the company share, where you will be owning only 49% of the shares. Local
+                        sponsor
+                        is a
+                        mandatory requirement if a foreign entrepreneur is planning to set up a business in UAE
+                        mainland.
+                        The sponsor should be a UAE national.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="div4">
+        <div class="container mt-5 py-2">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Corporate PRO Services in Dubai</strong></h4>
+                    <p>
+                        Becoming the leading corporate PRO service provider in Dubai is our mission. Achieving this
+                        mission starts with our approach and ends with Our People. Our goal is to provide the best PRO
+                        services to all our clients, ensuring we meet every need and complete every request.<br><br>
+                        Qambercorporateservices.com corporate PRO services in Dubai offer a professional service. Our
+                        team of experts with industry expertise and know-how helps submit your documents consistently
+                        and accurately, making the process faster and more cost-effective.<br><br>
+                        Qambercorporateservices.com Corporate PRO Services is a one-stop-shop for all government
+                        services in the UAE.
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <img class="img-fluid" src="images/qamber-img-3.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+        <style>
+            .qam {
+                background-color: #F5F5F5;
+                border-radius: 18px;
+            }
+
+            .qam strong {
+                color: #707070;
+                line-height: 1.6;
+                font-weight: 800;
+                font-family: Roboto, sans-serif;
+            }
+
+            .qam li {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.8;
+                color: #000000;
+                font-weight: 300;
+            }
+
+            .qamm li {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.8;
+                color: #000000;
+                font-weight: 300;
+            }
+
+            .mmm {
+                background-color: #F5F5F5;
+                border-radius: 18px;
+            }
+
+            .mmm strong {
+                color: #707070;
+                line-height: 1.6;
+                font-weight: 800;
+                font-family: Roboto, sans-serif;
+            }
+
+            .mmm p {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.7857;
+                color: #000000;
+                font-weight: 400;
+                margin-right: 25px;
+            }
+
+            .s-btn button {
+                background-color: #E8A419;
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: Roboto, sans-serif;
+                border-radius: 18px;
+                padding: 5px 28px 5px 28px;
+            }
+        </style>
+
+
+
+
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Our All-Inclusive Dubai Corporate PRO Services Packages include:</strong></h4>
+                    <p>
+                    <ul class="qamm">
+                        <li>New Visa Application</li>
+                        <li>visa Application Renewal</li>
+                        <li>Medical Test Supervision with Our Assigned PRO</li>
+                        <li>Emirates ID Application Services with Our Assigned PRO</li>
+                        <li>Visa Cancellation</li>
+                        <li>Dependent Visas</li>
+                        <li>Servant Visas</li>
+                        <li>Business Visas for Traveling to Other Countries</li>
+                        <li>Company License Renewal</li>
+                        <li>Immigration and Labor Card Renewal</li>
+                        <li>EJARI Registration</li>
+                        <li>Visit Visas for Business Partners and Associates</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qam p-4">
+                    <h4><strong>The Key Benefits to Outsource your Corporate PRO Services in Dubai to a Professional
+                            Team includes:</strong></h4>
+                    <ul>
+                        <li>No recruitment costs to hire an in-house PRO, no salary for in-house PRO.</li>
+                        <li>No employment visa costs, bank guarantee, insurance cost, or millage allowance every month.
+                        </li>
+                        <li>Dedicated account manager assigned to your company.</li>
+                        <li>A network across all the government departments and your typing team for fast applications.
+                        </li>
+                        <li>Transparent government costs per transaction with a monthly statement.</li>
+                        <li>Accurate completion time with regular updates.</li>
+                        <li>Management can focus on a business strategy and operations.</li>
+                        <li>Save time, money, and effort.</li>
+                        <li>No delay or fines for the employment visa application.</li>
+                        <li>Meeting deadlines for new bulk recruitment.</li>
+                    </ul>
+                </div>
+                <div class="col-12 mt-5">
+                    <p>Whether you are a free zone or a mainland business, we can assist you with all your
+                        government-related services.<br><br>You can contact us to receive a personalized Corporate PRO
+                        Services proposal covering all your needs under one annual contract with a monthly payment plan.
+                        Qambercorporateservices.com will create a PRO services proposal specifically for your company,
+                        based on the number of employees, several legal entities, and the scope of work required. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="div5">
+        <div class="container mt-5 py-2">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Visas – Resident and business</strong></h4>
+                    <p>
+                        There are three types of visas that are permitted in Dubai; employment visa, investor’s visa and
+                        partner’s visas. In order to acquire any of the mentioned visas there is a long process of paper
+                        work and a lot of regulations. At Qambercorporateservices.com we make sure that we facilitate
+                        this process and that we save you the hassle. Moreover, our team is always up to date with the
+                        new visa regulation in order to inform our clients with any changes and make sure that they are
+                        aware of any new requirements to maintain a tranquil business flow.
+
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <img class="img-fluid" src="images/qamber-img-4.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+        <style>
+            .qam {
+                background-color: #F5F5F5;
+                border-radius: 18px;
+            }
+
+            .qam strong {
+                color: #707070;
+                line-height: 1.6;
+                font-weight: 800;
+                font-family: Roboto, sans-serif;
+            }
+
+            .qam li {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.8;
+                color: #000000;
+                font-weight: 300;
+            }
+
+            .mmm {
+                background-color: #F5F5F5;
+                border-radius: 18px;
+            }
+
+            .mmm strong {
+                color: #707070;
+                line-height: 1.6;
+                font-weight: 800;
+                font-family: Roboto, sans-serif;
+            }
+
+            .mmm p {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.7857;
+                color: #000000;
+                font-weight: 400;
+                margin-right: 25px;
+            }
+
+            .s-btn button {
+                background-color: #E8A419;
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: Roboto, sans-serif;
+                border-radius: 18px;
+                padding: 5px 28px 5px 28px;
+            }
+        </style>
+
+
+
+
+
+
+        <div class="container my-3 py-3">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Employment Visa</strong></h4>
+                    <p>
+                        Employment visa is an entry document that is required for any person who will enter the UAE. It
+                        is issued by the Immigration Department for foreign nationals who are willing to work in the
+                        UAE. Once issued, the Employment Visa allows its holder to enter the UAE and is valid for 2
+                        months.<br><br>
+                        To issue an Employment Visa, a lot of documents are requires, such as; passport copy, attested
+                        education certificate, etc. Therefore, Qambercorporateservices.com helps facilitate this process
+                        an ensure that all the right documents are submitted in order to receive the employment visa for
+                        our clients employees.
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mmm p-4">
+                    <h4><strong>Investor and Partner Visa</strong></h4>
+                    <p>UAE Investor Visa can be acquired by both business partners in the free trade zone and partners
+                        in limited liability companies. UAE Investor Visa provides temporary residence, for three years,
+                        to its holder. Investor Visa gives its holder the authority to live, work and starts their own
+                        business in the UAE.</p>
+
+                    <h4><strong>Business Visas</strong></h4>
+                    <p>Qambercorporateservices.com can assist UAE residents in getting Business visas to different
+                        countries. If your employees are permanently travelling to different countries for business
+                        matters we would be delighted to assist with all the paperwork required to get Schengen visa, UK
+                        visa, USA visa or GCC visit visa. We would be happy to take care of the application forms,
+                        insurance and schedule the appointment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="div6">
+        <div class="container mt-5 py-2">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Welcome to qambercorporateservices.com Accounting Services</strong></h4>
+                    <p>
+                        With combination of Sharp and passionate team, we at Qambercorporateservices.com are offering
+                        economical and high technology accounting & bookkeeping services. We emphasize on having
+                        transparent business dealings to create comfortable and secured environment for clients. We
+                        offer a wide range of accounting services to a broad spectrum of industries.
+                        <br><br>
+                        We are Skilled, Experienced and Practiced.
+                        <br><br>
+                        Lead by an expert accounting professional, we are a brand where you deal directly with experts.
+                        We are proud and happy company, providing UAE world class accounting and VAT services.
+                        Qambercorporateservices.com Accounting is professional company based as addressed UAE and we
+                        work for happy companies.
+                        <br>
+                    <p>Get name approved from DED<br>
+                        Make MOA with professional service agent and submission with license application to DED<br>
+                        Decide your local service agent<br>
+                        Check location suitability, accessibility, and cost<br>
+                        Get the visa eligibility and requirements cleared<br>
+                        Choose a business registration consultant as trusted business solution partner</p>
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <img class="img-fluid" src="images/qamber-img-3.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+        <style>
+            .qam {
+                background-color: #F5F5F5;
+                border-radius: 18px;
+            }
+
+
+            .qam strong {
+                color: #707070;
+                line-height: 1.6;
+                font-weight: 800;
+                font-family: Roboto, sans-serif;
+            }
+
+            .qam li {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.8;
+                color: #000000;
+                font-weight: 300;
+            }
+
+            .mmm {
+                background-color: #F5F5F5;
+                border-radius: 18px;
+            }
+
+            .mmm strong {
+                color: #707070;
+                line-height: 1.6;
+                font-weight: 800;
+                font-family: Roboto, sans-serif;
+            }
+
+            .mmm p {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.7857;
+                color: #000000;
+                font-weight: 400;
+                margin-right: 25px;
+            }
+
+            .s-btn button {
+                background-color: #E8A419;
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: Roboto, sans-serif;
+                border-radius: 18px;
+                padding: 5px 28px 5px 28px;
+            }
+        </style>
+
+
+
+
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Accounting Services in UAE</strong></h4>
+                    <p>
+                        Qambercorporateservices.com is considered amongst the top accounting services in United Arab
+                        Emirates, we are led an expert accounting professional to provide Bookkeeping and Accounting
+                        services for all kinds of businesses based anywhere in UAE including the free zones and across
+                        different sectors.<br><br>
+                        We are renowned accounting firm in UAE, who spread each part of accountancy and aspire to
+                        comprehend your business requirements for accounting and bookkeeping services in UAE, and
+                        long-terms objectives so would meet your business necessities. Here, we assure you for the full
+                        privacy of accounts (work) are being maintained by us and all the transactions and reports are
+                        being maintained and kept properly related to the company’s financial reports.<br><br>
+                        At Qambercorporateservices.com, we ensure a smooth accounting system and therefore, put together
+                        better performance and efficiency at the end of the financial year, allow you to give more of
+                        your time and energy on expanding and advancing your business. We are being at your local gives
+                        you the best advice by our expert team who will make you overcome hurdles regarding accounting
+                        and drive you towards the success of your business. We are being amongst the best accounting
+                        companies in UAE, providing you with full-fledged services tailored according to you at
+                        reasonable prices.
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qam p-4">
+                    <h4><strong>Scope of work:</strong></h4>
+                    <ul>
+                        <li>Accounting on Monthly</li>
+                        <li>Monthly accounting on accounting software or any cloud-based</li>
+                        <li>Analyzing and Interpreting the</li>
+                        <li>Accounts Receivable and Accounts Payable</li>
+                        <li>Recording of Sale, Purchase transaction and VAT on</li>
+                        <li>Input Tax Credit Report as per</li>
+                        <li>Maintaining and reconciling all cash books and Bank</li>
+                        <li>Preparation and submission of quarterly/ monthly vat return and send report to</li>
+                        <li>I Support during annual audits as an additional</li>
+                        <li>Checking Payroll Register</li>
+                        <li>General ledger</li>
+                        <li>Balance sheet generation and</li>
+                        <li>Financial statements & custom</li>
+                        <li>Fixed asset</li>
+                        <li>Audit support etc.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="container my-3 py-3">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Financial Health Report</strong></h4>
+                    <p>
+                        Just like regular health checkup of human body or any automobile, our business also needs
+                        regular checkup of accounting, finance, cash flow and performance of Business. Administration
+                        and Finances of company need timely support from experts. With the profound knowledge of
+                        international taxation and UAE vat Law, our professionals can help your business perform
+                        exceptional. We provide comprehensive accounting and VAT services. We at
+                        Qambercorporateservices.com Accounting, are providing exceptional services and business
+                        solutions to small and medium enterprises. We ensure timely reporting of financial repot
+                    <ul class="qamm">
+                        <li>Our service includes:</li>
+                        <li>Budgets and Forecasting of Company</li>
+                        <li>Cash Flow Management and Control</li>
+                        <li>Key Performance Indicators</li>
+                        <li>Financial Analysis and Modelling</li>
+                        <li>Working with Professionals (bankers, lawyers )</li>
+                        <li>Budget Preparation &amp; Monitoring</li>
+                        <li>Cash Flow Management</li>
+                        <li>Financial Analysis</li>
+                        <li>Guidance for Business Planning and Forecasting</li>
+                        <li>Review Contracts</li>
+                        <li>Assist in Preparation of MIS Reports</li>
+                        <li>VAT Administration</li>
+                        <li>Ensure Financial Statements Accuracy</li>
+                        <li>Training and Support for Your Accounting Staff</li>
+                        <li>Improvement of Company Accounting Procedure</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mmm p-4">
+                    <h4><strong>Get Support, Training & Consulting for Accounting Software’s</strong></h4>
+                    <p>To endure and flourish in today’s extremely competitive worldwide market, you need employees that
+                        are more educated, more profitable, and further developed in their methodology toward conveying
+                        quality items or services. Accounting software training and consulting can be an incredible
+                        weapon in your employee training arsenal as long as you pick the one that meets your
+                        association’s definite needs.<br><br>
+                        Online accounting software or web-based accounting software in UAE represents the same
+                        philosophy.<br><br>
+                        We provide customized cooperate training in these software and set-up services delivered by
+                        experts that are tailored to your business and needs. The Cooperate Training provided by our
+                        team experts is aimed to make your auditing and bookkeeping processes smarter, quicker, and more
+                        effective than before.<br><br>
+                        With the dispatch of VAT, the ascent of web-based accounting software in Dubai has expanded its
+                        prominence.<br><br>
+                        VAT can influence most exchanges in any kind of business activity. It is, therefore, basic to
+                        consult specialists to guarantee consistence and refrain from any movement that lies outside the
+                        consistency standards. Especially in your worldwide transactions, it is critical to be VAT
+                        consistent as indicated by the UAE VAT laws that you are managing. This is where our specialists
+                        with numerous affirmations and training come in and have their impact.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="div7">
+        <div class="container mt-5 py-2">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Outsourced HR services</strong></h4>
+                    <p>
+                        Our aim is to offer our clients a 360 platform, Qambercorporateservices.com Corporate PRO
+                        Services and Business Setup have recently launched our HR Services which include; HR Admin
+                        Support, HR Consultancy, Payroll Management and Recruitment Solutions. We strive to continually
+                        develop add on services to enable our clients to focus on their company set-up and core business
+                        activities. Qambercorporateservices.com Corporate HR Services was developed with one goal in
+                        mind – to enable our clients to focus on their company set up and core business activities. Our
+                        dedicated team of experts offers professional HR services that are completely customized to
+                        company requirements.
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+                    <img class="img-fluid" src="images/qamber-img-2.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+        <style>
+            .qam {
+                background-color: #F5F5F5;
+                border-radius: 18px;
+            }
+
+            .qam strong {
+                color: #707070;
+                line-height: 1.6;
+                font-weight: 800;
+                font-family: Roboto, sans-serif;
+            }
+
+            .qam li {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.8;
+                color: #000000;
+                font-weight: 300;
+            }
+
+            .qamm li {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.8;
+                color: #000000;
+                font-weight: 300;
+            }
+
+            .mmm {
+                background-color: #F5F5F5;
+                border-radius: 18px;
+            }
+
+            .mmm strong {
+                color: #707070;
+                line-height: 1.6;
+                font-weight: 800;
+                font-family: Roboto, sans-serif;
+            }
+
+            .mmm p {
+                text-align: justify;
+                font-family: Roboto, sans-serif;
+                font-size: 13px;
+                line-height: 1.7857;
+                color: #000000;
+                font-weight: 400;
+                margin-right: 25px;
+            }
+
+            .s-btn button {
+                background-color: #E8A419;
+                color: #FFFFFF;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: Roboto, sans-serif;
+                border-radius: 18px;
+                padding: 5px 28px 5px 28px;
+            }
+        </style>
+
+
+
+
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- <div class="col-0 col-xs-0 col-sm-0 col-md-0 col-lg-1 col-xl-1"></div> -->
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>HR Admin Support</strong></h4>
+                    <p>
+                        Handling employees’ HR documentation can be a laborious activity that takes up valuable time and
+                        resources. Qambercorporateservices.com Corporate Services can take this administrative burden
+                        away by providing you with a variety of HR Admin Support Services inclusive of;
+
+                    <ul class="qamm">
+                        <li>Maintenance of HR files for employees</li>
+                        <li>HR template letters and No Objection Certificates (NOC’s)</li>
+                        <li>Leave Management</li>
+                        <li>Employee Handbooks</li>
+                        <li>Employment Offer Letters</li>
+                    </ul>
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mmm p-4">
+                    <h4><strong>HR Consultancy</strong></h4>
+                    <p>As part of our collaboration with a specialist HR Consultancy Firm, Qambercorporateservices.com
+                        Corporate PRO Services, and Business Setup offer HR advisory services covering the Reward,
+                        Performance and Organisation Design areas of HR. We work with our clients to develop bespoke HR
+                        frameworks, policies, and processes aligned to their HR requirements and corporate strategy.
+                        This enables our clients to draw flexibly on specialist advice whilst providing additional
+                        professional resources during critical periods or for specific projects. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-3 py-3">
+            <div class="row align-items-center">
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 qamber-right">
+                    <h4><strong>Payroll Management</strong></h4>
+                    <p>
+                        Our experienced team will ensure that all your payroll and employment obligations are met and
+                        that your organization complies with the Wage Protection System (WPS).
+                        Qambercorporateservices.com Corporate PRO Services and Business Setup payroll management
+                        offering includes:
+                        <br><br>
+                        Preparing and issuing payslips
+                        <br>
+                        Wage Protection System (WPS) registration
+                        <br>
+                        WPS payment through UAE Exchange or Banks
+                        <br><br>
+                    </p>
+                    <h4><strong>Recruitment Solutions</strong></h4>
+                    <p>In partnership with some of the region’s leading recruitment agencies,
+                        Qambercorporateservices.com Corporate PRO Services and Business Setup offers temporary, contract
+                        and permanent staffing solutions. We work alongside our recruitment partners to ensure that you
+                        have the right people in your organization at the right time.
+                    </p>
+                </div>
+                <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 mmm p-4">
+                    <h4><strong>Why Use qambercorporateservices.com Corporate Services HR Services?</strong></h4>
+                    <p>
+                        <b>TIME:</b><br>
+                        HR processes can be a time-consuming task that can prevent managers from spending time on core
+                        business activities. Outsourcing HR Services, for example, operating payroll or maintaining
+                        employee HR files will ensure effective and consistent HR delivery and increased efficiency
+                        without any time consumption from the company. <br><br>
+
+                        <b>COST:</b><br>
+                        Outsourcing HR Services can work out to be more cost-effective than having an internal HR
+                        function especially for smaller companies where the HR demand will not be as great as larger
+                        companies. In cases where there is limited HR presence or specialist HR knowledge in a company,
+                        the use of the advisory and recruitment solutions could be a cost-effective model, ensuring that
+                        such cost is taken only when specific projects or recruitment needs arise. <br><br>
+
+                        <b>EXPERTISE:</b><br>
+                        Companies with a generalist only or limited HR function can access expert recruiters and HR
+                        specialists to support the delivery of specialized, critical, or time-sensitive projects/hires.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .main-footer {
+            background-color: #F4F4F4;
+        }
+
+        .footer {
+            display: flex;
+        }
+
+        .footer a .i-1 {
+            -webkit-text-fill-color: #FFFFFF;
+            -webkit-text-stroke: 1px #9E9E9E;
+            border: .1px solid #FFFFFF;
+            border-radius: 50px;
+            margin: 0px 0px;
+            background-color: #FFFFFF;
+            padding: 9px;
+        }
+
+        .searchbar-btn-2 {
+            border-radius: 50px;
+            border-color: #9E9E9E;
+            padding: 4px 9px 4px 9px;
+        }
+
+        .searchbar-btn-2:hover {
+            background-color: transparent;
+            border-color: #9E9E9E;
+            color: #9E9E9E !important;
+        }
+
+        .iii-2 {
+            margin-right: 26px;
+        }
+    </style>
+
+    <div class="main-footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-0 col-lg-4 col-xl-4 d-none-md"></div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">POWERED BY <strong>QAMBER</strong>
+                </div>
+                <div class="col-0 col-lg-4 col-xl-4 d-none-md">
+                    <div class="footer justify-content-end">
+
+                        <a href="">
+                            <div class="input-group iii-2">
+                                <span class="input-group-append">
+                                    <button class="btn btn-outline-secondary searchbar-btn-2" type="button">
+                                        <i class="fa fa-search ccc-2"></i></button>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="i-1 fa-brands fa-facebook-f"></div>
+                        </a>
+                        <a href="">
+                            <div class="i-1 fa-brands fa-twitter mx-2"></div>
+                        </a>
+                        <a href="">
+                            <div class="i-1 fa-brands fa-linkedin-in"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        /* Bottom to top button */
+
+        .to-top {
+            background-color: #E8A419;
+            position: fixed;
+            bottom: 16px;
+            right: 32px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1f1f1f;
+            box-shadow: 0 0 5px rgb(0 0 0 / 17%);
+            text-decoration: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: all .4s;
+        }
+
+        .to-top i {
+            color: #F4F4F4;
+            font-size: 22px;
+        }
+
+        .to-top.active {
+            bottom: 32px;
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        /* Bottom to top button end */
+    </style>
+
+    <!-- Bottom to top button -->
+    <a href="#" class="to-top">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
+    <!-- Bottom to top button end -->
+    <script>
+        //Bottom to top button
+        const toTop = document.querySelector(".to-top");
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 250) {
+                toTop.classList.add("active");
+            } else {
+                toTop.classList.remove("active");
+            }
+        })
+
+    //Bottom to top arrow end
+    </script>
+
+    <script src="images/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

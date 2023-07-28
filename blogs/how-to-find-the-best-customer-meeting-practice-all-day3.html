@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Qamber Corporate Services</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo.png">
+    <!-- bootstrap cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- fontawesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- googlefonts cdn link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none !important;
+        transition: .3s linear;
+    }
+
+    input{
+        caret-color: #9E9E9E;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* header section style */
+
+    .header {
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 7%;
+        /* position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5000;
+        border-bottom: .8px solid #717171; */
+    }
+
+    .links a {
+        margin: 0 12px;
+        padding: 0px 7px 7px 7px;
+        color: #9E9E9E;
+        font-size: 15px !important;
+        font-weight: 400;
+        letter-spacing: .2px;
+    }
+
+    .links a:hover {
+        border-bottom: 2px solid #E8A419;
+        color: #474747;
+    }
+
+    .linksactive {
+        border-bottom: 2px solid #E8A419;
+        color: #474747 !important;
+        font-weight: 500 !important;
+    }
+
+    #menu-btnn {
+        display: none;
+    }
+
+    /*on scroll effect*/
+
+    .nav-change {
+        background: #713038;
+    }
+
+    /* header section */
+
+
+    /*home section style*/
+
+    /*home section style end*/
+
+    .searchbar {
+        border-radius: 200px 0px 0px 200px;
+        border-right-color: transparent !important;
+        border-color: #9E9E9E;
+        box-shadow: none;
+        width: 160px !important;
+    }
+
+    .searchbar:focus {
+        box-shadow: none;
+        border-color: #9E9E9E;
+    }
+
+    .searchbar-btn {
+        border-radius: 0px 100px 100px 0px;
+        border-left-color: transparent !important;
+        border-color: #9E9E9E;
+    }
+
+    .iii {
+        margin-right: 28px;
+    }
+
+    .ccc {
+        -webkit-text-fill-color: #9E9E9E;
+        /* -webkit-text-stroke: 1px #9E9E9E; */
+    }
+
+    .searchbar-btn:hover {
+        background-color: transparent;
+        border-color: #9E9E9E;
+        color: none;
+    }
+
+    .icons {
+        display: flex;
+    }
+
+    .icons a div {
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px #9E9E9E;
+        border: .5px solid #9E9E9E;
+        border-radius: 50px;
+        margin: 0px 0px;
+        padding: 9px;
+    }
+
+    .fab {
+        padding: 9px 12px !important;
+    }
+
+    .mobile-navbar-btn {
+        display: none;
+    }
+
+    @media(max-width: 1130px) {
+        .iii {
+            display: none;
+        }
+    }
+
+    @media(max-width: 991px) {
+        .d-none-md {
+            display: none;
+        }
+    }
+
+    @media(max-width: 980px) {
+
+        .mobile-navbar-btn {
+            display: block;
+        }
+
+        .mobile-navbar-btn i {
+            color: #000000;
+        }
+
+        .links {
+            display: none;
+        }
+
+        .offcanvas {
+            background-color: #F4F4F4;
+        }
+
+        .linksoff ul li {
+            list-style: none;
+            justify-content: start;
+            margin: 16px 0px;
+        }
+
+        .linksoff ul li a {
+            color: #9E9E9E;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: .2px;
+        }
+
+        .linksactiveoff {
+            border-bottom: 2px solid #E8A419;
+            color: #000000 !important;
+            font-weight: 600;
+
+        }
+
+        .icons {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+
+    <!-- header section start -->
+    <header class="header" id="nav">
+        <div class="logo">
+            <a href="../index.html"><img width="125px" src="../images/black-logo.png" alt=""></a>
+        </div>
+
+        <div class="links">
+            <a href="../index.html">Home</a>
+            <a href="../about-us.html">About Us</a>
+            <a href="../services.html">Services</a>
+            <a href="../blogs.html">Blog</a>
+            <a href="../contact-us.html">Contact Us</a>
+        </div>
+
+        <div class="icons">
+
+            <a href="">
+                <div class="fa-brands fa-facebook-f fab"></div>
+            </a>
+            <a href="">
+                <div class="fa-brands fa-twitter mx-2"></div>
+            </a>
+            <a href="">
+                <div class="fa-brands fa-linkedin-in"></div>
+            </a>
+        </div>
+
+        <div class="mobile-navbar-btn">
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"><i name="menu-btn"
+                    class="fa-solid fa-bars fa-2xl"></i></button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+                aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="linksoff">
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../about-us.html">About Us</a></li>
+                            <li><a href="../services.html">Services</a></li>
+                            <li><a href="../contact-us.html">Contact Us</a></li>
+                            <li><a href="../blogs.html">Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- header section ends -->
+
+    <style>
+        .sec {
+            background-color: #F5F5F5;
+        }
+
+        .home a {
+            color: #9E9E9E;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .home a:hover {
+            color: #000000;
+        }
+
+        .about-us a {
+            color: #000000;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    </style>
+    <div class="sec">
+        <div class="container d-flex flex-wrap py-2">
+            <div class="home"><a href="../index.html">Home ></a></div>
+            <div class="home mx-2"><a href="../blogs.html">Blogs ></a></div>
+            <div class="about-us"><a href="how-to-find-the-best-customer-meeting-practice-all-day.html">How to find
+                    the best Customer meeting practice all day</a></div>
+        </div>
+    </div>
+
+
+
+
+    <style>
+        .section-header strong {
+            color: #A1A1A1;
+            line-height: 1.6;
+            font-family: Roboto, sans-serif;
+        }
+
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box img {
+            border-radius: 18px 18px 0px 0px;
+            height: 390px !important;
+            width: 100% !important;
+        }
+
+        .content {
+            background-color: #F5F5F5;
+            border-radius: 0px 0px 18px 18px;
+        }
+
+        .content h5 {
+            font-size: 20px !important;
+            font-weight: 800;
+            font-family: Roboto, sans-serif;
+            color: #000000;
+        }
+
+        .content p {
+            text-align: justify;
+            font-size: 14px;
+            color: 7A7A7A;
+        }
+
+        .content div button {
+            background-color: #939393;
+            border-radius: 18px;
+            color: #FFFFFF;
+            font-weight: 400;
+        }
+
+        .content div button a {
+            color: #FFFFFF;
+        }
+
+        .content div button {
+            background-color: #939393 !important;
+            color: #FFFFFF !important;
+            font-weight: 400 !important;
+        }
+
+        .date {
+            font-size: 12px;
+            color: #000000;
+            text-align: end;
+        }
+    </style>
+
+
+
+
+
+
+
+    <div class="container my-5">
+        <div class="row box-container">
+            <div class="col-12 box">
+                <p class="date">23 Feb, 2023</p>
+                <img class="img-fluid"
+                    src="data:image/jpeg;base64,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"
+                    alt="">
+                <div class="content p-4">
+                    <h5 class="my-3">How to find the best Customer meeting practice all day</h5>
+                    <p>Starting a business in Dubai is very easy when you have the right and required paperwork.
+                        However, the documents required, the languages of the documents and the process of acquiring
+                        them can be yet long and sometimes tricky, therefore; if you are not familiar with UAE’s rules
+                        and preferred language, you might find the formation process difficult. At Global Link, we
+                        facilitate the business formation process and save you the hassle
+                        <br>1- Having a Local Sponsor<br><br>
+
+                        If you are willing to start up your business in the mainland then, according to UAE law, you
+                        need to have a local sponsor. A local sponsor is to own 51% of the company and you will own 49%
+                        of the company. The local sponsor will only have an annual fee; however, will not share any of
+                        the company’s profit. However, having a local sponsor facilitates the business formation
+                        process.Starting a business in Dubai is very easy when you have the right and required
+                        paperwork. However, the documents required, the languages of the documents and the process of
+                        acquiring them can be yet long and sometimes tricky, therefore; if you are not familiar with
+                        UAE’s rules and preferred language, you might find the formation process difficult. At Global
+                        Link, we facilitate the business formation process and save you the hassle
+                        <br>1- Having a Local Sponsor<br><br>
+
+                        If you are willing to start up your business in the mainland then, according to UAE law, you
+                        need to have a local sponsor. A local sponsor is to own 51% of the company and you will own 49%
+                        of the company. The local sponsor will only have an annual fee; however, will not share any of
+                        the company’s profit. However, having a local sponsor facilitates the business formation
+                        process.Starting a business in Dubai is very easy when you have the right and required
+                        paperwork. However, the documents required, the languages of the documents and the process of
+                        acquiring them can be yet long and sometimes tricky, therefore; if you are not familiar with
+                        UAE’s rules and preferred language, you might find the formation process difficult. At Global
+                        Link, we facilitate the business formation process and save you the hassle
+                        <br>1- Having a Local Sponsor<br><br>
+
+                        If you are willing to start up your business in the mainland then, according to UAE law, you
+                        need to have a local sponsor. A local sponsor is to own 51% of the company and you will own 49%
+                        of the company. The local sponsor will only have an annual fee; however, will not share any of
+                        the company’s profit. However, having a local sponsor facilitates the business formation
+                        process.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        .main-footer {
+            background-color: #F4F4F4;
+        }
+
+        .footer {
+            display: flex;
+        }
+
+        .footer a .i-1 {
+            -webkit-text-fill-color: #FFFFFF;
+            -webkit-text-stroke: 1px #9E9E9E;
+            border: .1px solid #FFFFFF;
+            border-radius: 50px;
+            margin: 0px 0px;
+            background-color: #FFFFFF;
+            padding: 9px;
+        }
+
+        .searchbar-btn-2 {
+            border-radius: 50px;
+            border-color: #9E9E9E;
+            padding: 4px 9px 4px 9px;
+        }
+
+        .searchbar-btn-2:hover {
+            background-color: transparent;
+            border-color: #9E9E9E;
+            color: #9E9E9E !important;
+        }
+
+        .iii-2 {
+            margin-right: 26px;
+        }
+    </style>
+
+    <div class="main-footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-0 col-lg-4 col-xl-4 d-none-md"></div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 text-center">POWERED BY <strong>QAMBER</strong>
+                </div>
+                <div class="col-0 col-lg-4 col-xl-4 d-none-md">
+                    <div class="footer justify-content-end">
+
+                        <a href="">
+                            <div class="input-group iii-2">
+                                <span class="input-group-append">
+                                    <button class="btn btn-outline-secondary searchbar-btn-2" type="button">
+                                        <i class="fa fa-search ccc-2"></i></button>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="i-1 fa-brands fa-facebook-f"></div>
+                        </a>
+                        <a href="">
+                            <div class="i-1 fa-brands fa-twitter mx-2"></div>
+                        </a>
+                        <a href="">
+                            <div class="i-1 fa-brands fa-linkedin-in"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <style>
+        /* Bottom to top button */
+    
+        .to-top {
+            background-color: #E8A419;
+            position: fixed;
+            bottom: 16px;
+            right: 32px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1f1f1f;
+            box-shadow: 0 0 5px rgb(0 0 0 / 17%);
+            text-decoration: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: all .4s;
+        }
+    
+        .to-top i {
+            color: #F4F4F4;
+            font-size: 22px;
+        }
+    
+        .to-top.active {
+            bottom: 32px;
+            pointer-events: auto;
+            opacity: 1;
+        }
+    
+        /* Bottom to top button end */
+    </style>
+    
+    <!-- Bottom to top button -->
+    <a href="#" class="to-top">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
+    <!-- Bottom to top button end -->
+    <script>
+        //Bottom to top button
+        const toTop = document.querySelector(".to-top");
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 250) {
+                toTop.classList.add("active");
+            } else {
+                toTop.classList.remove("active");
+            }
+        })
+    
+    //Bottom to top arrow end
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
